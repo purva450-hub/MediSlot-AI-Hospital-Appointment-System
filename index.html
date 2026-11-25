@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediSlot - AI-Based Hospital Appointment Scheduling System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="side" id="side">
+  <a class="brand" href="#/home"><svg viewBox="0 0 32 32" width="34" height="34"><rect width="32" height="32" rx="9" fill="#1e88e5"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#fff"/></svg><span>MediSlot<small>Smart hospital scheduling</small></span></a>
+  <nav id="nav"></nav>
+</aside>
+<div class="main">
+  <header class="top">
+    <button class="icon-btn menu" data-act="menu" aria-label="Menu">&#9776;</button>
+    <div class="gsearch"><input id="gs" placeholder="Search patients, doctors, appointments (name or ID)" autocomplete="off"><div id="gres" class="gres" hidden></div></div>
+    <button class="icon-btn" data-act="bell" aria-label="Notifications">&#128276;<i id="bellN" class="dot"></i></button>
+    <div id="notes" class="notes" hidden></div>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="modal" class="modal" hidden><div class="sheet"><div class="mh"><h3 id="mt"></h3><button class="icon-btn" data-act="closeModal" aria-label="Close">&times;</button></div><div id="mb"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="dsa.js"></script>
+<script>window.addEventListener("error",function(e){var v=document.getElementById("view");if(v&&!v.innerHTML.trim())v.innerHTML='<div style="padding:24px;color:#a02020"><b>JavaScript error:</b> '+e.message+' ('+(e.filename||"").split("/").pop()+':'+e.lineno+')</div>'});</script>
+</body>
+</html>
